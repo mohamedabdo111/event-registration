@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+input[type="tel"] {
+  outline: none;
+}
+
 .css-13cymwt-control {
   border-color: transparent !important;
   padding: 0 !important;

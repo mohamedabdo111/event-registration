@@ -209,12 +209,17 @@ export default function EventRegistrationPage() {
                       errors.location ? "border-red-300" : "border-gray-300"
                     } px-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm`}
                     value={formData.location}
-                    onChange={(e) =>
+                    onChange={(e) => {
                       setFormData((prev) => ({
                         ...prev,
                         location: e,
-                      }))
-                    }
+                      }));
+
+                      setErrors((prev) => ({
+                        ...prev,
+                        location: "",
+                      }));
+                    }}
                   />
 
                   {errors.location && (
@@ -295,12 +300,17 @@ export default function EventRegistrationPage() {
                     className={`mt-1 block w-full rounded-md border ${
                       errors.phone ? "border-red-300" : "border-gray-300"
                     } px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm`}
-                    onChange={(e) =>
+                    onChange={(e) => {
                       setFormData((prev) => ({
                         ...prev,
                         phone: e,
-                      }))
-                    }
+                      }));
+
+                      setErrors((prev) => ({
+                        ...prev,
+                        phone: "",
+                      }));
+                    }}
                   />
 
                   {errors.phone && (
